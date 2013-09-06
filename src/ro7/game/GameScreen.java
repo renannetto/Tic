@@ -8,8 +8,13 @@ import java.awt.event.MouseWheelEvent;
 import cs195n.Vec2i;
 import ro7.engine.Application;
 import ro7.engine.Screen;
+import ro7.game.gamesprites.Board;
+import ro7.game.gamesprites.TicUI;
 
 public class GameScreen extends Screen {
+	
+	private TicUI ui;
+	private Board board;
 
 	protected GameScreen(Application app) {
 		super(app);

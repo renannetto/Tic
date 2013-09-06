@@ -12,8 +12,9 @@ import cs195n.Vec2i;
 
 public class Application extends SwingFrontEnd {
 
-	List<Screen> screens;
-	Screen topScreen;
+	private List<Screen> screens;
+	private Screen topScreen;
+	private Vec2i windowSize;
 
 	public Application(String title, boolean fullscreen) {
 		super(title, fullscreen);
@@ -149,10 +150,15 @@ public class Application extends SwingFrontEnd {
 	@Override
 	protected void onResize(Vec2i newSize) {
 		try {
+			windowSize = newSize;
 			topScreen.onResize(newSize);
 		} catch (NullPointerException exception) {
 			System.out.println("There is no current Screen");
 		}
+	}
+	
+	public Vec2i getWindowSize() {
+		return windowSize;
 	}
 
 }

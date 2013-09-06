@@ -1,15 +1,24 @@
 package ro7.game;
 
+import java.awt.Color;
 import java.awt.Graphics2D;
+import java.awt.Rectangle;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseWheelEvent;
+import java.awt.geom.Rectangle2D;
 
 import ro7.engine.Application;
 import ro7.engine.Screen;
+import ro7.game.gamesprites.Message;
+import cs195n.Vec2f;
 import cs195n.Vec2i;
 
 public class TitleScreen extends Screen {
+
+	private Message title;
+	private Message startMessage;
+	private Vec2i windowSize;
 
 	protected TitleScreen(Application app) {
 		super(app);
@@ -23,8 +32,22 @@ public class TitleScreen extends Screen {
 
 	@Override
 	public void onDraw(Graphics2D g) {
-		// TODO Auto-generated method stub
+		Rectangle2D background = new Rectangle(0, 0, windowSize.x, windowSize.y);
+		g.setColor(Color.BLACK);
+		g.draw(background);
+		g.fill(background);
 
+		float titleX = windowSize.x / 3.0f;
+		float titleY = windowSize.y / 4.0f;
+		title = new Message("Welcome to Tic!", 48, Color.WHITE, new Vec2f(
+				titleX, titleY));
+		title.draw(g);
+
+		float startMessageX = windowSize.x / 3.0f - 100;
+		float startMessageY = windowSize.y / 4.0f + 50;
+		startMessage = new Message("Click on the screen or press Enter to start", 28,
+				Color.WHITE, new Vec2f(startMessageX, startMessageY));
+		startMessage.draw(g);
 	}
 
 	@Override
@@ -51,8 +74,7 @@ public class TitleScreen extends Screen {
 
 	@Override
 	public void onMouseClicked(MouseEvent e) {
-		// TODO Auto-generated method stub
-
+		app.pushScreen(new GameScreen(app));
 	}
 
 	@Override
@@ -87,8 +109,7 @@ public class TitleScreen extends Screen {
 
 	@Override
 	public void onResize(Vec2i newSize) {
-		// TODO Auto-generated method stub
-
+		windowSize = newSize;
 	}
 
 }
