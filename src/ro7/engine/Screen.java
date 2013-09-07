@@ -10,6 +10,7 @@ import cs195n.Vec2i;
 public abstract class Screen {
 	
 	protected Application app;
+	protected Vec2i windowSize;
 	
 	protected Screen(Application app) {
 		this.app = app;
@@ -48,6 +49,8 @@ public abstract class Screen {
 	public abstract void onMouseWheelMoved(MouseWheelEvent e);
 
 	
-	public abstract void onResize(Vec2i newSize);
+	public void onResize(Vec2i newSize) {
+		windowSize = newSize;
+	}
 
 }

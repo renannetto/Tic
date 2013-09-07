@@ -35,6 +35,7 @@ public class Application extends SwingFrontEnd {
 	public void pushScreen(Screen screen) {
 		screens.add(0, screen);
 		topScreen = screen;
+		topScreen.onResize(windowSize);
 	}
 
 	public void popScreen() {
@@ -42,6 +43,7 @@ public class Application extends SwingFrontEnd {
 			screens.remove(0);
 			if (!screens.isEmpty()) {
 				topScreen = screens.get(0);
+				topScreen.onResize(windowSize);
 			} else  {
 				topScreen = null;
 			}
@@ -62,7 +64,7 @@ public class Application extends SwingFrontEnd {
 		try {
 			topScreen.onDraw(g);
 		} catch (NullPointerException exception) {
-			System.out.println("There is no current Screen");
+			//System.out.println("There is no current Screen");
 		}
 	}
 

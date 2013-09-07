@@ -10,15 +10,13 @@ import java.awt.geom.Rectangle2D;
 
 import ro7.engine.Application;
 import ro7.engine.Screen;
-import ro7.game.gamesprites.Message;
+import ro7.game.sprites.Message;
 import cs195n.Vec2f;
-import cs195n.Vec2i;
 
 public class TitleScreen extends Screen {
 
 	private Message title;
 	private Message startMessage;
-	private Vec2i windowSize;
 
 	protected TitleScreen(Application app) {
 		super(app);
@@ -105,11 +103,6 @@ public class TitleScreen extends Screen {
 	public void onMouseWheelMoved(MouseWheelEvent e) {
 		// TODO Auto-generated method stub
 
-	}
-
-	@Override
-	public void onResize(Vec2i newSize) {
-		windowSize = newSize;
 	}
 
 }
