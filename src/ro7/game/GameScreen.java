@@ -41,6 +41,14 @@ public class GameScreen extends Screen {
 		
 		Board board = new Board(new Vec2f(0.0f, 0.0f), Math.min(windowSize.x, windowSize.y), boardModel.toString());
 		board.draw(g);
+		
+		if (boardModel.isComplete()) {
+			app.popScreen();
+			app.pushScreen(new CompleteScreen(app, boardModel.winner()));
+		} else if(boardModel.isDraw()) {
+			app.popScreen();
+			app.pushScreen(new DrawScreen(app));
+		}
 	}
 
 	@Override

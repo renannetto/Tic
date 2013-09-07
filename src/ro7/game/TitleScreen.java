@@ -57,9 +57,7 @@ public class TitleScreen extends Screen {
 	@Override
 	public void onKeyPressed(KeyEvent e) {
 		int keyCode = e.getKeyCode();
-		System.out.println("Key pressed on Title Screen: " + keyCode);
 		if (keyCode == 10) {
-			System.out.println("Enter pressed, changing to Game Screen");
 			app.pushScreen(new GameScreen(app));
 		}
 	}

@@ -6,6 +6,7 @@ import java.awt.FontMetrics;
 import java.awt.Graphics2D;
 import java.awt.geom.Rectangle2D;
 
+import ro7.engine.Sprite;
 import cs195n.Vec2f;
 
 public class Message extends Sprite {
@@ -22,16 +23,13 @@ public class Message extends Sprite {
 	}
 
 	@Override
-	public void draw(Graphics2D g) {
-		g.translate(position.x, position.y);
+	public void drawSprite(Graphics2D g) {
 		g.setFont(new Font("Arial", Font.PLAIN, fontSize));
 		g.setColor(fontColor);
 		
 		FontMetrics font = g.getFontMetrics();
 		Rectangle2D bounds = font.getStringBounds(text, g);
 		g.drawString(text, (float)bounds.getMinX(), (float)bounds.getMaxY());
-		
-		g.translate(-position.x, -position.y);
 	}
 
 }

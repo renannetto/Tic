@@ -2,9 +2,9 @@ package ro7.game.sprites;
 
 import java.awt.Color;
 import java.awt.Graphics2D;
-import java.awt.geom.Ellipse2D;
 import java.awt.geom.Line2D;
 
+import ro7.engine.Sprite;
 import cs195n.Vec2f;
 
 public class Board extends Sprite {
@@ -19,8 +19,7 @@ public class Board extends Sprite {
 	}
 
 	@Override
-	public void draw(Graphics2D g) {
-		g.translate(position.x, position.y);
+	public void drawSprite(Graphics2D g) {
 		g.setColor(Color.WHITE);
 
 		float space = size / 3.0f;
@@ -34,8 +33,6 @@ public class Board extends Sprite {
 			char square = board.charAt(i);
 			drawSquare(g, square, i+1);
 		}
-
-		g.translate(-position.x, -position.y);
 	}
 	
 	public void drawSquare(Graphics2D g, char square, int pos) {
