@@ -30,7 +30,7 @@ public abstract class EndScreen extends Screen {
 
 		float endX = windowSize.x / 3.0f;
 		float endY = windowSize.y / 4.0f;
-		Message endMessage = new Message(text, 48, Color.WHITE, new Vec2f(
+		Message endMessage = new Message(text, 36, Color.WHITE, new Vec2f(
 				endX, endY));
 		endMessage.draw(g);
 

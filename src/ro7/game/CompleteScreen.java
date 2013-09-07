@@ -9,7 +9,7 @@ import ro7.engine.Application;
 public class CompleteScreen extends EndScreen {
 
 	public CompleteScreen(Application app, String winner) {
-		super(app, "Congratulations! " + winner + "!");
+		super(app, winner);
 	}
 
 	@Override

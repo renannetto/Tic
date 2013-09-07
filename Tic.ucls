@@ -3,7 +3,7 @@
   associations="true" dependencies="false" nesting-relationships="true">  
   <package id="1" language="java" name="ro7.engine" project="Tic" file="/Tic/src/ro7/engine" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="487" width="616" x="-2" y="-29"/>    
+    <position height="500" width="616" x="-2" y="-29"/>    
     <display autosize="false" stereotype="true" accessors="true"/>  
   </package>  
   <class id="2" language="java" name="ro7.engine.Application" project="Tic" file="/Tic/src/ro7/engine/Application.java" 
@@ -17,7 +17,7 @@
   </class>  
   <class id="3" language="java" name="ro7.engine.Screen" project="Tic" file="/Tic/src/ro7/engine/Screen.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="443" y="229"/>    
+    <position height="-1" width="-1" x="441" y="173"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
       visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -26,12 +26,12 @@
   </class>  
   <package id="4" language="java" name="ro7.game.sprites" project="Tic" file="/Tic/src/ro7/game/sprites" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="436" width="908" x="634" y="388"/>    
+    <position height="436" width="681" x="642" y="484"/>    
     <display autosize="false" stereotype="true" accessors="true"/>  
   </package>  
   <class id="5" language="java" name="ro7.game.sprites.TicCircle" project="Tic" 
     file="/Tic/src/ro7/game/sprites/TicCircle.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="725" y="658"/>    
+    <position height="-1" width="-1" x="749" y="610"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
       visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -40,7 +40,7 @@
   </class>  
   <class id="6" language="java" name="ro7.game.sprites.TicX" project="Tic" file="/Tic/src/ro7/game/sprites/TicX.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1048" y="659"/>    
+    <position height="-1" width="-1" x="953" y="618"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
       visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -49,46 +49,37 @@
   </class>  
   <class id="7" language="java" name="ro7.game.sprites.TicUI" project="Tic" file="/Tic/src/ro7/game/sprites/TicUI.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="901" y="658"/>    
+    <position height="-1" width="-1" x="767" y="751"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
       visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="8" language="java" name="ro7.game.sprites.Sprite" project="Tic" 
-    file="/Tic/src/ro7/game/sprites/Sprite.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1077" y="512"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
-      visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="9" language="java" name="ro7.game.sprites.Message" project="Tic" 
+  <class id="8" language="java" name="ro7.game.sprites.Message" project="Tic" 
     file="/Tic/src/ro7/game/sprites/Message.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1434" y="509"/>    
+    <position height="-1" width="-1" x="1181" y="610"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
       visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="10" language="java" name="ro7.game.sprites.Board" project="Tic" file="/Tic/src/ro7/game/sprites/Board.java" 
+  <class id="9" language="java" name="ro7.game.sprites.Board" project="Tic" file="/Tic/src/ro7/game/sprites/Board.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1351" y="706"/>    
+    <position height="-1" width="-1" x="1085" y="779"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
       visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <package id="11" language="java" name="ro7.game" project="Tic" file="/Tic/src/ro7/game" binary="false" 
+  <package id="10" language="java" name="ro7.game" project="Tic" file="/Tic/src/ro7/game" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="369" width="1011" x="637" y="-15"/>    
+    <position height="480" width="1094" x="637" y="-15"/>    
     <display autosize="false" stereotype="true" accessors="true"/>  
   </package>  
-  <class id="12" language="java" name="ro7.game.GameScreen" project="Tic" file="/Tic/src/ro7/game/GameScreen.java" 
+  <class id="11" language="java" name="ro7.game.GameScreen" project="Tic" file="/Tic/src/ro7/game/GameScreen.java" 
     binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="772" y="179"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
@@ -97,7 +88,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="13" language="java" name="ro7.game.TitleScreen" project="Tic" file="/Tic/src/ro7/game/TitleScreen.java" 
+  <class id="12" language="java" name="ro7.game.TitleScreen" project="Tic" file="/Tic/src/ro7/game/TitleScreen.java" 
     binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1046" y="189"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
@@ -106,113 +97,161 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="14" language="java" name="ro7.game.GameMain" project="Tic" file="/Tic/src/ro7/game/GameMain.java" 
+  <class id="13" language="java" name="ro7.game.GameMain" project="Tic" file="/Tic/src/ro7/game/GameMain.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1301" y="90"/>    
+    <position height="-1" width="-1" x="1507" y="96"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
       visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <package id="15" language="java" name="ro7.game.models" project="Tic" file="/Tic/src/ro7/game/models" binary="false" 
+  <package id="14" language="java" name="ro7.game.models" project="Tic" file="/Tic/src/ro7/game/models" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="245" width="406" x="0" y="474"/>    
+    <position height="332" width="531" x="0" y="474"/>    
     <display autosize="false" stereotype="true" accessors="true"/>  
   </package>  
-  <class id="16" language="java" name="ro7.game.models.Board" project="Tic" file="/Tic/src/ro7/game/models/Board.java" 
+  <class id="15" language="java" name="ro7.game.models.Board" project="Tic" file="/Tic/src/ro7/game/models/Board.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="299" y="617"/>    
+    <position height="-1" width="-1" x="91" y="669"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
       visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <generalization id="17">    
-    <end type="SOURCE" refId="13"/>    
-    <end type="TARGET" refId="3"/>  
-  </generalization>  
-  <generalization id="18">    
-    <end type="SOURCE" refId="7"/>    
-    <end type="TARGET" refId="8"/>  
-  </generalization>  
-  <generalization id="19">    
-    <end type="SOURCE" refId="5"/>    
-    <end type="TARGET" refId="8"/>  
-  </generalization>  
+  <class id="16" language="java" name="ro7.game.EndScreen" project="Tic" file="/Tic/src/ro7/game/EndScreen.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1320" y="109"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="17" language="java" name="ro7.game.CompleteScreen" project="Tic" 
+    file="/Tic/src/ro7/game/CompleteScreen.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1335" y="337"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="18" language="java" name="ro7.game.DrawScreen" project="Tic" file="/Tic/src/ro7/game/DrawScreen.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1598" y="338"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="19" language="java" name="ro7.engine.Sprite" project="Tic" file="/Tic/src/ro7/engine/Sprite.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="433" y="399"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
   <association id="20">    
-    <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="21" name="topScreen"/>      
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="21" name="boardModel"/>      
       <multiplicity id="22" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="3" navigable="true"/>    
+    <end type="TARGET" refId="15" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <generalization id="23">    
-    <end type="SOURCE" refId="9"/>    
-    <end type="TARGET" refId="8"/>  
-  </generalization>  
-  <association id="24">    
-    <end type="SOURCE" refId="12" navigable="false">      
-      <attribute id="25" name="boardModel"/>      
-      <multiplicity id="26" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="16" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="27">    
-    <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="28" name="app"/>      
-      <multiplicity id="29" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="2" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="30">    
-    <end type="SOURCE" refId="13" navigable="false">      
-      <attribute id="31" name="title"/>      
-      <multiplicity id="32" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="9" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="33">    
-    <end type="SOURCE" refId="12"/>    
-    <end type="TARGET" refId="3"/>  
-  </generalization>  
-  <association id="34">    
-    <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="35" name="screens"/>      
-      <multiplicity id="36" minimum="0" maximum="2147483647"/>    
-    </end>    
-    <end type="TARGET" refId="3" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="37">    
     <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="8"/>  
+    <end type="TARGET" refId="19"/>  
   </generalization>  
-  <association id="38">    
-    <end type="SOURCE" refId="12" navigable="false">      
-      <attribute id="39" name="ui"/>      
-      <multiplicity id="40" minimum="0" maximum="1"/>    
+  <generalization id="24">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="16"/>  
+  </generalization>  
+  <association id="25">    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="26" name="ui"/>      
+      <multiplicity id="27" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="7" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <generalization id="41">    
-    <end type="SOURCE" refId="10"/>    
-    <end type="TARGET" refId="8"/>  
+  <generalization id="28">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="19"/>  
   </generalization>  
-  <association id="42">    
-    <end type="SOURCE" refId="13" navigable="false">      
-      <attribute id="43" name="startMessage"/>      
-      <multiplicity id="44" minimum="0" maximum="1"/>    
+  <association id="29">    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="30" name="app"/>      
+      <multiplicity id="31" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="9" navigable="true"/>    
+    <end type="TARGET" refId="2" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
+  <generalization id="32">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="19"/>  
+  </generalization>  
+  <association id="33">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="34" name="screens"/>      
+      <multiplicity id="35" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="36">    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="3"/>  
+  </generalization>  
+  <generalization id="37">    
+    <end type="SOURCE" refId="18"/>    
+    <end type="TARGET" refId="16"/>  
+  </generalization>  
+  <association id="38">    
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="39" name="startMessage"/>      
+      <multiplicity id="40" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="8" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="41">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="3"/>  
+  </generalization>  
+  <generalization id="42">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="19"/>  
+  </generalization>  
+  <generalization id="43">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="19"/>  
+  </generalization>  
+  <association id="44">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="45" name="topScreen"/>      
+      <multiplicity id="46" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="47">    
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="48" name="title"/>      
+      <multiplicity id="49" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="8" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="50">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="3"/>  
+  </generalization>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="true"/>    
