@@ -2,9 +2,11 @@ package ro7.game.sprites;
 
 import java.awt.Color;
 import java.awt.Graphics2D;
+import java.awt.Point;
 import java.awt.geom.Line2D;
 
-import ro7.engine.Sprite;
+import ro7.engine.sprites.Circle;
+import ro7.engine.sprites.Sprite;
 import cs195n.Vec2f;
 
 public class Board extends Sprite {
@@ -47,8 +49,8 @@ public class Board extends Sprite {
 			x.draw(g);
 			break;
 		case 'O':
-			TicCircle circle = new TicCircle(new Vec2f(space * xPosition, space
-					* yPosition), space);
+			Circle circle = new Circle(new Vec2f(space * xPosition, space
+					* yPosition), space, Color.WHITE);
 			circle.draw(g);
 			break;
 		}
@@ -59,6 +61,21 @@ public class Board extends Sprite {
 		Line2D boardLine;
 		boardLine = new Line2D.Float(x1, x2, x3, x4);
 		g.draw(boardLine);
+	}
+	
+	public void setState(String board) {
+		this.board = board;
+	}
+
+	public int getClickedSquare(Point point) {
+		int x = point.x;
+		int y = point.y;
+		float space = size / 3.0f;
+		
+		int column = (int)(x/space);
+		int row = (int)(y/space);
+		
+		return (column+1) + (row*3);
 	}
 
 }

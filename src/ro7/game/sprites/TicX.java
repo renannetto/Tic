@@ -4,7 +4,7 @@ import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.geom.Line2D;
 
-import ro7.engine.Sprite;
+import ro7.engine.sprites.Sprite;
 import cs195n.Vec2f;
 
 public class TicX extends Sprite {

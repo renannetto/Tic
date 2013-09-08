@@ -1,4 +1,4 @@
-package ro7.game.sprites;
+package ro7.engine.sprites;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -6,7 +6,6 @@ import java.awt.FontMetrics;
 import java.awt.Graphics2D;
 import java.awt.geom.Rectangle2D;
 
-import ro7.engine.Sprite;
 import cs195n.Vec2f;
 
 public class Message extends Sprite {

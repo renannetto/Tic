@@ -13,23 +13,43 @@ import ro7.engine.Screen;
 import ro7.game.sprites.Board;
 import ro7.game.sprites.TicUI;
 import cs195n.Vec2f;
+import cs195n.Vec2i;
 
 public class GameScreen extends Screen {
-	
+
+	private final int TIME_LIMIT = 3000;
+
 	private TicUI ui;
 	private ro7.game.models.Board boardModel;
+	private Board boardSprite;
 	private int currentPlayer;
+	private int remainingTime;
 
 	protected GameScreen(Application app) {
 		super(app);
 		boardModel = new ro7.game.models.Board();
 		currentPlayer = 1;
+		remainingTime = TIME_LIMIT;
 	}
 
 	@Override
 	public void onTick(long nanosSincePreviousTick) {
-		// TODO Auto-generated method stub
+		int millisTime = (int) (nanosSincePreviousTick / 1000000);
+		remainingTime -= millisTime;
+		if (remainingTime <= 0) {
+			switchPlayer();
+		}
+		ui.setTime(remainingTime);
+	}
 
+	private void switchPlayer() {
+		if (currentPlayer == 1) {
+			currentPlayer = 2;
+		} else {
+			currentPlayer = 1;
+		}
+		remainingTime = TIME_LIMIT;
+		ui.setPlayer(currentPlayer);
 	}
 
 	@Override
@@ -38,16 +58,17 @@ public class GameScreen extends Screen {
 		g.setColor(Color.BLACK);
 		g.draw(background);
 		g.fill(background);
-		
-		Board board = new Board(new Vec2f(0.0f, 0.0f), Math.min(windowSize.x, windowSize.y), boardModel.toString());
-		board.draw(g);
-		
+
+		boardSprite.draw(g);
+
+		ui.draw(g);
+
 		if (boardModel.isComplete()) {
 			app.popScreen();
-			app.pushScreen(new CompleteScreen(app, boardModel.winner()));
-		} else if(boardModel.isDraw()) {
+			app.pushScreen(new EndScreen(app, boardModel.winner()));
+		} else if (boardModel.isDraw()) {
 			app.popScreen();
-			app.pushScreen(new DrawScreen(app));
+			app.pushScreen(new EndScreen(app, "It was a draw!"));
 		}
 	}
 
@@ -61,37 +82,25 @@ public class GameScreen extends Screen {
 	public void onKeyPressed(KeyEvent e) {
 		int keyCode = e.getKeyCode();
 		switch (keyCode) {
-		case 27: app.popScreen();
-		break;
-		case 49: setSquare(1);
-		break;
-		case 50: setSquare(2);
-		break;
-		case 51: setSquare(3);
-		break;
-		case 52: setSquare(4);
-		break;
-		case 53: setSquare(5);
-		break;
-		case 54: setSquare(6);
-		break;
-		case 55: setSquare(7);
-		break;
-		case 56: setSquare(8);
-		break;
-		case 57: setSquare(9);
-		break;
+		case 27:
+			app.popScreen();
+			break;
+		case 82:
+			app.popScreen();
+			app.pushScreen(new GameScreen(app));
+			break;
 		}
 	}
 
 	private void setSquare(int position) {
 		if (currentPlayer == 1) {
 			boardModel.setX(position);
-			currentPlayer = 2;
+			switchPlayer();
 		} else {
 			boardModel.setCircle(position);
-			currentPlayer = 1;
+			switchPlayer();
 		}
+		boardSprite.setState(boardModel.toString());
 	}
 
 	@Override
@@ -102,8 +111,8 @@ public class GameScreen extends Screen {
 
 	@Override
 	public void onMouseClicked(MouseEvent e) {
-		// TODO Auto-generated method stub
-
+		int square = boardSprite.getClickedSquare(e.getPoint());
+		setSquare(square);
 	}
 
 	@Override
@@ -134,6 +143,23 @@ public class GameScreen extends Screen {
 	public void onMouseWheelMoved(MouseWheelEvent e) {
 		// TODO Auto-generated method stub
 
+	}
+
+	public void onResize(Vec2i newSize) {
+		super.onResize(newSize);
+
+		int boardSize = 0;
+		if (windowSize.x < windowSize.y) {
+			boardSize = windowSize.x;
+			ui = new TicUI(new Vec2f(0.0f, boardSize), new Vec2i(boardSize,
+					windowSize.y - boardSize), currentPlayer, remainingTime);
+		} else {
+			boardSize = windowSize.y;
+			ui = new TicUI(new Vec2f(boardSize, 0.0f), new Vec2i(windowSize.x
+					- boardSize, boardSize), currentPlayer, remainingTime);
+		}
+		boardSprite = new Board(new Vec2f(0.0f, 0.0f), boardSize,
+				boardModel.toString());
 	}
 
 }

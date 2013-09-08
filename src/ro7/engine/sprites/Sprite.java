@@ -1,4 +1,4 @@
-package ro7.engine;
+package ro7.engine.sprites;
 
 import java.awt.Graphics2D;
 

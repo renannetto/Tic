@@ -4,7 +4,8 @@
   <package id="1" language="java" name="ro7.engine" project="Tic" file="/Tic/src/ro7/engine" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="500" width="616" x="-2" y="-29"/>    
-    <display autosize="false" stereotype="true" accessors="true"/>  
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true"/>  
   </package>  
   <class id="2" language="java" name="ro7.engine.Application" project="Tic" file="/Tic/src/ro7/engine/Application.java" 
     binary="false" corner="BOTTOM_RIGHT">    
@@ -27,7 +28,8 @@
   <package id="4" language="java" name="ro7.game.sprites" project="Tic" file="/Tic/src/ro7/game/sprites" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="436" width="681" x="642" y="484"/>    
-    <display autosize="false" stereotype="true" accessors="true"/>  
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true"/>  
   </package>  
   <class id="5" language="java" name="ro7.game.sprites.TicCircle" project="Tic" 
     file="/Tic/src/ro7/game/sprites/TicCircle.java" binary="false" corner="BOTTOM_RIGHT">    
@@ -56,8 +58,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="8" language="java" name="ro7.game.sprites.Message" project="Tic" 
-    file="/Tic/src/ro7/game/sprites/Message.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="8" language="java" name="ro7.engine.sprites.Message" project="Tic" 
+    file="/Tic/src/ro7/engine/sprites/Message.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1181" y="610"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
       visibility="true">      
@@ -77,7 +79,8 @@
   <package id="10" language="java" name="ro7.game" project="Tic" file="/Tic/src/ro7/game" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="480" width="1094" x="637" y="-15"/>    
-    <display autosize="false" stereotype="true" accessors="true"/>  
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true"/>  
   </package>  
   <class id="11" language="java" name="ro7.game.GameScreen" project="Tic" file="/Tic/src/ro7/game/GameScreen.java" 
     binary="false" corner="BOTTOM_RIGHT">    
@@ -109,7 +112,8 @@
   <package id="14" language="java" name="ro7.game.models" project="Tic" file="/Tic/src/ro7/game/models" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="332" width="531" x="0" y="474"/>    
-    <display autosize="false" stereotype="true" accessors="true"/>  
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true"/>  
   </package>  
   <class id="15" language="java" name="ro7.game.models.Board" project="Tic" file="/Tic/src/ro7/game/models/Board.java" 
     binary="false" corner="BOTTOM_RIGHT">    
@@ -147,8 +151,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="19" language="java" name="ro7.engine.Sprite" project="Tic" file="/Tic/src/ro7/engine/Sprite.java" 
-    binary="false" corner="BOTTOM_RIGHT">    
+  <class id="19" language="java" name="ro7.engine.sprites.Sprite" project="Tic" 
+    file="/Tic/src/ro7/engine/sprites/Sprite.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="433" y="399"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
       visibility="true">      

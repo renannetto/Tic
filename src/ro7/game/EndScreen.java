@@ -5,18 +5,22 @@ import java.awt.Graphics2D;
 import java.awt.Rectangle;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
+import java.awt.event.MouseWheelEvent;
 import java.awt.geom.Rectangle2D;
 
 import ro7.engine.Application;
 import ro7.engine.Screen;
-import ro7.game.sprites.Message;
+import ro7.engine.sprites.Message;
 import cs195n.Vec2f;
+import cs195n.Vec2i;
 
-public abstract class EndScreen extends Screen {
+public class EndScreen extends Screen {
 	
 	private String text;
+	private Message endMessage;
+	private Message restartMessage;
 
-	protected EndScreen(Application app, String text) {
+	public EndScreen(Application app, String text) {
 		super(app);
 		this.text = text;
 	}
@@ -27,17 +31,9 @@ public abstract class EndScreen extends Screen {
 		g.setColor(Color.BLACK);
 		g.draw(background);
 		g.fill(background);
-
-		float endX = windowSize.x / 3.0f;
-		float endY = windowSize.y / 4.0f;
-		Message endMessage = new Message(text, 36, Color.WHITE, new Vec2f(
-				endX, endY));
+		
 		endMessage.draw(g);
-
-		float restartMessageX = windowSize.x / 3.0f - 100;
-		float restartMessageY = windowSize.y / 4.0f + 50;
-		Message restartMessage = new Message("Click on the screen or press r to restart", 28,
-				Color.WHITE, new Vec2f(restartMessageX, restartMessageY));
+		
 		restartMessage.draw(g);
 	}
 	
@@ -54,6 +50,69 @@ public abstract class EndScreen extends Screen {
 	public void onMouseClicked(MouseEvent e) {
 		app.popScreen();
 		app.pushScreen(new GameScreen(app));
+	}
+	
+	public void onResize(Vec2i newSize) {
+		super.onResize(newSize);
+		
+		float endX = windowSize.x / 4.0f;
+		float endY = windowSize.y / 3.0f;
+		int fontSize = windowSize.x / 24;
+		endMessage = new Message(text, fontSize, Color.WHITE, new Vec2f(
+				endX, endY));
+		
+		float restartMessageX = endX + 30;
+		float restartMessageY = 2*endY;
+		restartMessage = new Message("Click on the screen or press r to restart", fontSize/2,
+				Color.WHITE, new Vec2f(restartMessageX, restartMessageY));
+	}
+
+	@Override
+	public void onTick(long nanosSincePreviousTick) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onKeyTyped(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onKeyReleased(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onMousePressed(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onMouseReleased(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onMouseDragged(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onMouseMoved(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onMouseWheelMoved(MouseWheelEvent e) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

@@ -10,8 +10,9 @@ import java.awt.geom.Rectangle2D;
 
 import ro7.engine.Application;
 import ro7.engine.Screen;
-import ro7.game.sprites.Message;
+import ro7.engine.sprites.Message;
 import cs195n.Vec2f;
+import cs195n.Vec2i;
 
 public class TitleScreen extends Screen {
 
@@ -35,16 +36,8 @@ public class TitleScreen extends Screen {
 		g.draw(background);
 		g.fill(background);
 
-		float titleX = windowSize.x / 3.0f;
-		float titleY = windowSize.y / 4.0f;
-		title = new Message("Welcome to Tic!", 48, Color.WHITE, new Vec2f(
-				titleX, titleY));
 		title.draw(g);
 
-		float startMessageX = windowSize.x / 3.0f - 100;
-		float startMessageY = windowSize.y / 4.0f + 50;
-		startMessage = new Message("Click on the screen or press Enter to start", 28,
-				Color.WHITE, new Vec2f(startMessageX, startMessageY));
 		startMessage.draw(g);
 	}
 
@@ -101,6 +94,26 @@ public class TitleScreen extends Screen {
 	public void onMouseWheelMoved(MouseWheelEvent e) {
 		// TODO Auto-generated method stub
 
+	}
+
+	public void onResize(Vec2i newSize) {
+		super.onResize(newSize);
+
+		try {
+			float titleX = windowSize.x / 3.0f;
+			float titleY = windowSize.y / 3.0f;
+			int fontSize = windowSize.x / 24;
+			title = new Message("Welcome to Tic!", fontSize, Color.WHITE, new Vec2f(
+					titleX, titleY));
+
+			float startMessageX = titleX - 50;
+			float startMessageY = 2*titleY;
+			startMessage = new Message(
+					"Click on the screen or press Enter to start", fontSize/2,
+					Color.WHITE, new Vec2f(startMessageX, startMessageY));
+		} catch (NullPointerException e) {
+			System.out.println("No windowSize defined");
+		}
 	}
 
 }
