@@ -26,10 +26,10 @@ public class Board extends Sprite {
 
 		float space = size / 3.0f;
 
-		drawBoardLine(g, 0.0f, space, size, space);
-		drawBoardLine(g, 0.0f, 2 * space, size, 2 * space);
-		drawBoardLine(g, space, 0.0f, space, size);
-		drawBoardLine(g, 2 * space, 0.0f, 2 * space, size);
+		drawBoardLine(g, new Vec2f(0.0f, space), new Vec2f(size, space));
+		drawBoardLine(g, new Vec2f(0.0f, 2 * space), new Vec2f(size, 2 * space));
+		drawBoardLine(g, new Vec2f(space, 0.0f), new Vec2f(space, size));
+		drawBoardLine(g, new Vec2f(2 * space, 0.0f), new Vec2f(2 * space, size));
 
 		for (int i = 0; i < 9; i++) {
 			char square = board.charAt(i);
@@ -37,6 +37,12 @@ public class Board extends Sprite {
 		}
 	}
 	
+	/**
+	 * Draw an X or a O in a board square
+	 * @param g Graphics2D object to draw on the screen
+	 * @param square symbol to draw (X or O)
+	 * @param pos square position
+	 */
 	public void drawSquare(Graphics2D g, char square, int pos) {
 		int xPosition = (pos - 1) % 3;
 		int yPosition = (pos - 1) / 3;
@@ -56,10 +62,15 @@ public class Board extends Sprite {
 		}
 	}
 
-	private void drawBoardLine(Graphics2D g, float x1, float x2, float x3,
-			float x4) {
+	/**
+	 * Draw a line of the board
+	 * @param g Graphics2D object to draw on the screen
+	 * @param start start point of the line
+	 * @param end end point of the line
+	 */
+	private void drawBoardLine(Graphics2D g, Vec2f start, Vec2f end) {
 		Line2D boardLine;
-		boardLine = new Line2D.Float(x1, x2, x3, x4);
+		boardLine = new Line2D.Float(start.x, start.y, end.x, end.y);
 		g.draw(boardLine);
 	}
 	
@@ -67,6 +78,11 @@ public class Board extends Sprite {
 		this.board = board;
 	}
 
+	/**
+	 * Get the position of a clicked square
+	 * @param point coordinates of the point clicked on the screen
+	 * @return position of the square
+	 */
 	public int getClickedSquare(Point point) {
 		int x = point.x;
 		int y = point.y;

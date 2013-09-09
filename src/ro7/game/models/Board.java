@@ -16,6 +16,11 @@ public class Board {
 		winner = '_';
 	}
 
+	/**
+	 * Set an X on the board
+	 * @param position square position to be setted
+	 * @return true if the square was empty, false otherwise
+	 */
 	public boolean setX(int position) {
 		if (isEmpty(position)) {
 			board.set(position - 1, 'X');
@@ -24,6 +29,11 @@ public class Board {
 		return false;
 	}
 
+	/**
+	 * Set a O on the board
+	 * @param position square position to be setted
+	 * @return true if the square was empty, false otherwise
+	 */
 	public boolean setCircle(int position) {
 		if (isEmpty(position)) {
 			board.set(position - 1, 'O');
@@ -32,11 +42,20 @@ public class Board {
 		return false;
 	}
 	
+	/**
+	 * Check if a square is empty
+	 * @param position square position
+	 * @return true if the square is empty, false otherwise
+	 */
 	public boolean isEmpty(int position) {
 		char square = board.get(position - 1);
 		return square=='_';
 	}
 	
+	/**
+	 * Check if there is a winner
+	 * @return true if there is a winner, false otherwise
+	 */
 	public boolean isComplete() {
 		boolean firstLine = board.get(0) == board.get(1) && board.get(0) == board.get(2) && !isEmpty(1) && !isEmpty(2) && !isEmpty(3);
 		if (firstLine) {
@@ -81,10 +100,20 @@ public class Board {
 		return false;
 	}
 	
+	/**
+	 * Check if it was a draw
+	 * @return true if it was a draw, false otherwise
+	 */
 	public boolean isDraw() {
 		return !board.contains('_') && !isComplete();
 	}
 
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 * Return the board state as a String. Each character
+	 * is X, O or _, with the last one representing an 
+	 * empty square
+	 */
 	@Override
 	public String toString() {
 		String boardString = "";
@@ -94,6 +123,10 @@ public class Board {
 		return boardString;
 	}
 
+	/**
+	 * Get a string with the winner
+	 * @return string with winner
+	 */
 	public String winner() {
 		if (!isComplete()) {
 			return "There is no winner";

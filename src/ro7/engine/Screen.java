@@ -19,6 +19,10 @@ public abstract class Screen {
 	public abstract void onTick(long nanosSincePreviousTick);
 
 	
+	/**
+	 * Draw the sprites initialized by the screen
+	 * @param g Graphics2D object to draw on the screen
+	 */
 	public abstract void onDraw(Graphics2D g);
 
 	
@@ -49,6 +53,11 @@ public abstract class Screen {
 	public abstract void onMouseWheelMoved(MouseWheelEvent e);
 
 	
+	/**
+	 * Save the new window size and initialize sprite objects
+	 * according to it
+	 * @param newSize new window size
+	 */
 	public void onResize(Vec2i newSize) {
 		windowSize = newSize;
 	}

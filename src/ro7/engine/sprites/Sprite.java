@@ -12,12 +12,20 @@ public abstract class Sprite {
 		this.position = position;
 	}
 	
+	/**
+	 * Translate to the sprite position and draw it
+	 * @param g Graphics2D object to draw on the screen
+	 */
 	public void draw(Graphics2D g) {
 		g.translate(position.x, position.y);
 		drawSprite(g);
 		g.translate(-position.x, -position.y);
 	}
 	
+	/**
+	 * Draw the sprite
+	 * @param g Graphics2D object to draw on the screen
+	 */
 	public abstract void drawSprite(Graphics2D g);
 
 }

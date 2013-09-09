@@ -32,6 +32,11 @@ public class GameScreen extends Screen {
 		remainingTime = TIME_LIMIT;
 	}
 
+	/* (non-Javadoc)
+	 * @see ro7.engine.Screen#onTick(long)
+	 * Update the remaining time and change the current player, 
+	 * if necessary
+	 */
 	@Override
 	public void onTick(long nanosSincePreviousTick) {
 		int millisTime = (int) (nanosSincePreviousTick / 1000000);
@@ -42,6 +47,9 @@ public class GameScreen extends Screen {
 		ui.setTime(remainingTime);
 	}
 
+	/**
+	 * Change the current player and restart the timer 
+	 */
 	private void switchPlayer() {
 		if (currentPlayer == 1) {
 			currentPlayer = 2;
@@ -78,6 +86,11 @@ public class GameScreen extends Screen {
 
 	}
 
+	/* (non-Javadoc)
+	 * @see ro7.engine.Screen#onKeyPressed(java.awt.event.KeyEvent)
+	 * If Esc is pressed, go back to the Title Screen, if r
+	 * is pressed, start a new game
+	 */
 	@Override
 	public void onKeyPressed(KeyEvent e) {
 		int keyCode = e.getKeyCode();
@@ -92,6 +105,10 @@ public class GameScreen extends Screen {
 		}
 	}
 
+	/**
+	 * Set a new square with an X or O on the board
+	 * @param position position of the square
+	 */
 	private void setSquare(int position) {
 		if (currentPlayer == 1) {
 			boardModel.setX(position);
@@ -109,6 +126,10 @@ public class GameScreen extends Screen {
 
 	}
 
+	/* (non-Javadoc)
+	 * @see ro7.engine.Screen#onMouseClicked(java.awt.event.MouseEvent)
+	 * Get the clicked square and set it
+	 */
 	@Override
 	public void onMouseClicked(MouseEvent e) {
 		int square = boardSprite.getClickedSquare(e.getPoint());

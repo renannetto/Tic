@@ -1,0 +1,7 @@
+Tic instructions
+
+Title screen: just click on the screen or press Enter to start the game
+
+Game screen: click on the square you want to mark an X or a circle. The current player and the remaining time will be shown on the screen. When the game is complete it will automatically change to the end screen. If you want to go back to the title screen, just press Esc. If you want to restart the game just press r.
+
+End screen: just click on the screen or press r to start a new game.

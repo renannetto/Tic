@@ -1,0 +1,21 @@
+Tic README
+
+How to check engine requirements:
+ - Separate application from screens: the engine package contains an Application class which extends SwingFrontEnd and receive all the events. This class contains a list of screens, and redirects the event to the top screen. The engine package contains the screen abstraction, while the game package contains the screen implementations for the game.
+ - Drawing: the application class receive the onDraw event, called from the support code and redirects it to the top screen. All the screens implement the onDraw method, as can be seen on the classes that extend Screen on the game package.
+ - Mouse event support: same for drawing. Application receives onMouse events and redirects them to the top screen. Each screen can handle it in a different way.
+ - Keyboard event support: same for drawing. Application receives onKey events and redirects them to the top screen. Each screen can handle it in a different way. 
+ - Screen updates: same for drawing. Application receives onTick events and redirects them to the top screen. Each screen can handle it in a different way.
+ - Resizing: the Applications class also redirects onResize events to the top screen. However, it also saves the new window size, so when the top screen changes, it can resize the new top screen to the new size. All of this can be checked on the onResize, pushScreen and popScreen methods in the Application class.
+
+How to check game requirements:
+ - Time limit, display timer and current player: the time limit for each turn is 3 seconds. During the game you can see the remaining time in milliseconds and the current player on the UI. If the time expires, the current player will change and the timer will reset.
+ - At least two screens: there is the Title Screen, the Game Screen and the End Screen. All of them can be checked by playing one game.
+ - Mouse events: there are mouse events on the Title Screen to start the game, on the End Screen to start a new game, and on the Game Screen to click on the squares.
+ - Keyboard events: there are keyboard events on the Title Screen to start the game and on both Game and End Screens to start a new game.
+ - Which player won or draw: the End Screen shows the winner, or if it was a draw.
+ - Allow the player to start a new game: the player can start a new game by pressing r during the game or on the End Screen.
+ - State of the game: the Game Screen will show a square board with the game state.
+ - UI elements: the UI elements show the timer and the current player. They will resize according the the window size.
+
+Approximate number of hours: 7 hours.

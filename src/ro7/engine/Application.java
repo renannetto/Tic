@@ -32,12 +32,22 @@ public class Application extends SwingFrontEnd {
 		screens = new ArrayList<Screen>();
 	}
 
+	/**
+	 * Add a new screen to the list. This new screen becomes
+	 * the top screen.
+	 * 
+	 * @param screen	new screen to be added
+	 */
 	public void pushScreen(Screen screen) {
 		screens.add(0, screen);
 		topScreen = screen;
 		topScreen.onResize(windowSize);
 	}
 
+	/**
+	 * Remove the top screen from the list and set a new top
+	 * screen.
+	 */
 	public void popScreen() {
 		if (!screens.isEmpty()) {
 			screens.remove(0);
@@ -157,10 +167,6 @@ public class Application extends SwingFrontEnd {
 		} catch (NullPointerException exception) {
 			System.out.println("There is no current Screen");
 		}
-	}
-	
-	public Vec2i getWindowSize() {
-		return windowSize;
 	}
 
 }
